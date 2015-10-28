@@ -2,4 +2,4 @@
 
 angular.module('recipeAnimations', ['ngAnimate']);
 
-console.log('hello from aniamte');
+console.log('hello from animate');
