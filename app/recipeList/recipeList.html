@@ -24,7 +24,7 @@
             <option value="-name">Z- A</option>
         </select>
         <ul>
-            <li class="recipe-list" ng-repeat="(index, recipe) in recipes | filter: filterRecipes || query | orderBy:orderProp" ng-class="{'selected': recipe.selected}" ng-click="selectRecipe(recipe)">
+            <li class="recipe-list" ng-repeat="(index, recipe) in recipes | filter: {category:filterRecipes, name:query} | orderBy:orderProp" ng-class="{'selected': recipe.selected}" ng-click="selectRecipe(recipe)">
                 <a href="#/recipes/{{recipe.id}}"><div class="recipe">{{recipe.name}}</div></a>
             </li>
         </ul>
