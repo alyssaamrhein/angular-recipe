@@ -1,0 +1,32 @@
+<div class="wrapper" ng-controller="recipeListCtrl as recipe">
+    <aside class="side-menu">
+        <h5>Categories</h5>
+        <ul>
+            <li>
+                <input type="radio" ng-model="catSort" name="Breakfast" value="Breakfast" />Breakfast</li>
+            <li>
+                <input type="radio" ng-model="catSort" name="Lunch" value="Lunch" />Lunch</li>
+            <li>
+                <input type="radio" ng-model="catSort" name="Dinner" value="Dinner" />Dinner</li>
+            <li>
+                <input type="radio" ng-model="catSort" name="all" value="" />All</li>
+        </ul>
+
+
+
+    </aside>
+    <article class="grid">
+        <h5>Recipes</h5>
+        <input ng-model="query">
+        <select ng-model="orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+            <option value="-name">Z- A</option>
+        </select>
+        <ul>
+            <li class="recipe-list" ng-repeat="(index, recipe) in recipes | filter: filterRecipes || query | orderBy:orderProp" ng-class="{'selected': recipe.selected}" ng-click="selectRecipe(recipe)">
+                <a href="#/recipes/{{recipe.id}}"><div class="recipe">{{recipe.name}}</div></a>
+            </li>
+        </ul>
+    </article>
+</div>

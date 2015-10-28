@@ -1,0 +1,9 @@
+[
+  {"ingredients": ["bread", "butter", "cinnamon", "sugar"]},
+  {"directions": [
+    "step 1 Put bread in toaster",
+    "step 2 turn toaster on",
+    "step 3 take toast out and put butter on"]
+  },
+  {"time": "~5 min"}
+]
